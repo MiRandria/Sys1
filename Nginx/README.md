@@ -1,15 +1,18 @@
-## Installation de Nginx 
+# Installation de Nginx 
 
-### Installation 
+## Installation 
 Se connecter en tant qu'utilisateur root.
 
-Pour l'installer, exécutez la commande suivante :
+## Installation du paquet :
+Commencer par installer le paquet. Exécuter les commandes suivantes pour mettre à jour la liste des paquets et installer Nginx.
     sudo apt-get install nginx
+    
 
-### Configuration 
-#####
-Pour activer les configurations, il est mieux de créer un lien symbolique vers /etc/nginx/sites-enabled, à l'aide de ces commandes  :
-    sudo ln -s /etc/nginx/sites-available/site /etc/nginx/sites-enabled/site
+## Configuration de NGINX:
+La configuration de votre serveur NGINX se trouve dans le dossier :
+    /etc/nginx
 
-##### Configuration globale de Nginx
-Le principal fichier de configuration de Nginx se trouve dans /etc/nginx/nginx.conf.
+## A chaque fois qu'on effectue des modifications dans ce fichier, il est nécessaire de redémarrer le serveur à l’aide de l’une des commandes suivantes pour qu’elles soient prises en compte : 
+    sudo service nginx reload
+    sudo service nginx restart
+
